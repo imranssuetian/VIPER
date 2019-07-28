@@ -7,13 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086494022DA5C573694CFE8A /* Pods_VIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDF086D0DE26B7CE820663B /* Pods_VIPER.framework */; };
+		360D2BD95BD6C37E844FE835 /* Pods_VIPERUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14DD498D526ECE15ACF0080 /* Pods_VIPERUITests.framework */; };
+		E20F6F2622E6E8DE005A8C5A /* HourlyCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F6F2522E6E8DE005A8C5A /* HourlyCVC.swift */; };
+		E20F6F3522E70DE2005A8C5A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F6F2E22E70DE1005A8C5A /* NetworkManager.swift */; };
+		E20F6F3622E70DE2005A8C5A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F6F2F22E70DE1005A8C5A /* Utilities.swift */; };
+		E20F6F3722E70DE2005A8C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20F6F3122E70DE2005A8C5A /* LaunchScreen.storyboard */; };
+		E20F6F3822E70DE2005A8C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E20F6F3322E70DE2005A8C5A /* Main.storyboard */; };
+		E20F6F3B22E710BC005A8C5A /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F6F3A22E710BC005A8C5A /* WeatherModel.swift */; };
+		E20F6F3D22E71844005A8C5A /* WeatherModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F6F3C22E71844005A8C5A /* WeatherModel2.swift */; };
+		E20F6F3F22E74781005A8C5A /* WeatherList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F6F3E22E74781005A8C5A /* WeatherList.swift */; };
+		E210560922E5D80400DCAFFC /* TodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210560722E5D80400DCAFFC /* TodayTableViewCell.swift */; };
+		E210560A22E5D80400DCAFFC /* TodayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E210560822E5D80400DCAFFC /* TodayTableViewCell.xib */; };
+		E210561122E5D85A00DCAFFC /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210560F22E5D85A00DCAFFC /* HourlyTableViewCell.swift */; };
+		E210561222E5D85A00DCAFFC /* HourlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E210561022E5D85A00DCAFFC /* HourlyTableViewCell.xib */; };
+		E210561522E5D86B00DCAFFC /* WeeklyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210561322E5D86B00DCAFFC /* WeeklyTableViewCell.swift */; };
+		E210561622E5D86B00DCAFFC /* WeeklyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E210561422E5D86B00DCAFFC /* WeeklyTableViewCell.xib */; };
+		E210561922E5D87C00DCAFFC /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210561722E5D87C00DCAFFC /* DescriptionTableViewCell.swift */; };
+		E210561A22E5D87C00DCAFFC /* DescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E210561822E5D87C00DCAFFC /* DescriptionTableViewCell.xib */; };
+		E210561D22E5D9BC00DCAFFC /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210561B22E5D9BC00DCAFFC /* HourlyCollectionViewCell.swift */; };
+		E210561E22E5D9BC00DCAFFC /* HourlyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E210561C22E5D9BC00DCAFFC /* HourlyCollectionViewCell.xib */; };
+		E210562222E5DD8200DCAFFC /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E210562022E5DD8200DCAFFC /* DetailsTableViewCell.swift */; };
+		E210562322E5DD8200DCAFFC /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E210562122E5DD8200DCAFFC /* DetailsTableViewCell.xib */; };
 		E216579522E5CD3400A5AA0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216579422E5CD3400A5AA0F /* AppDelegate.swift */; };
-		E216579722E5CD3400A5AA0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216579622E5CD3400A5AA0F /* ViewController.swift */; };
+		E216579722E5CD3400A5AA0F /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216579622E5CD3400A5AA0F /* WeatherViewController.swift */; };
 		E216579A22E5CD3400A5AA0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E216579822E5CD3400A5AA0F /* Main.storyboard */; };
 		E216579C22E5CD3500A5AA0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E216579B22E5CD3500A5AA0F /* Assets.xcassets */; };
 		E216579F22E5CD3500A5AA0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E216579D22E5CD3500A5AA0F /* LaunchScreen.storyboard */; };
 		E21657AA22E5CD3600A5AA0F /* VIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21657A922E5CD3600A5AA0F /* VIPERTests.swift */; };
 		E21657B522E5CD3600A5AA0F /* VIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21657B422E5CD3600A5AA0F /* VIPERUITests.swift */; };
+		E219639A22E88C1400683C67 /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219639922E88C1300683C67 /* WeatherInfo.swift */; };
+		E266100222E833200019CCB9 /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E266100122E833200019CCB9 /* WeatherAPI.swift */; };
+		E2818E6D22E9848700D05EBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2818E6C22E9848700D05EBE /* Constants.swift */; };
+		E2E309E522E9C50600ED0BE4 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E309E422E9C50500ED0BE4 /* UIImage+Gif.swift */; };
+		E2E309E722E9C52500ED0BE4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E309E622E9C52500ED0BE4 /* Info.plist */; };
+		EA83B04506A2B2108A347383 /* Pods_VIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D910386807400C5F603413 /* Pods_VIPERTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +62,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07D910386807400C5F603413 /* Pods_VIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C6793092C001DF7A29491C /* Pods-VIPERUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERUITests.debug.xcconfig"; path = "Target Support Files/Pods-VIPERUITests/Pods-VIPERUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A498476458FCD44403F6209 /* Pods-VIPERUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERUITests.release.xcconfig"; path = "Target Support Files/Pods-VIPERUITests/Pods-VIPERUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9FDF086D0DE26B7CE820663B /* Pods_VIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C8B34F21E2F9E0D626F638 /* Pods-VIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.debug.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		DA22764E4109D8074FCFD00E /* Pods-VIPERTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERTests.release.xcconfig"; path = "Target Support Files/Pods-VIPERTests/Pods-VIPERTests.release.xcconfig"; sourceTree = "<group>"; };
+		E20F6F2522E6E8DE005A8C5A /* HourlyCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCVC.swift; sourceTree = "<group>"; };
+		E20F6F2E22E70DE1005A8C5A /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E20F6F2F22E70DE1005A8C5A /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		E20F6F3222E70DE2005A8C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E20F6F3422E70DE2005A8C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E20F6F3A22E710BC005A8C5A /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		E20F6F3C22E71844005A8C5A /* WeatherModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel2.swift; sourceTree = "<group>"; };
+		E20F6F3E22E74781005A8C5A /* WeatherList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherList.swift; sourceTree = "<group>"; };
+		E210560722E5D80400DCAFFC /* TodayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTableViewCell.swift; sourceTree = "<group>"; };
+		E210560822E5D80400DCAFFC /* TodayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayTableViewCell.xib; sourceTree = "<group>"; };
+		E210560F22E5D85A00DCAFFC /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
+		E210561022E5D85A00DCAFFC /* HourlyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyTableViewCell.xib; sourceTree = "<group>"; };
+		E210561322E5D86B00DCAFFC /* WeeklyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTableViewCell.swift; sourceTree = "<group>"; };
+		E210561422E5D86B00DCAFFC /* WeeklyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeeklyTableViewCell.xib; sourceTree = "<group>"; };
+		E210561722E5D87C00DCAFFC /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		E210561822E5D87C00DCAFFC /* DescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		E210561B22E5D9BC00DCAFFC /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		E210561C22E5D9BC00DCAFFC /* HourlyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyCollectionViewCell.xib; sourceTree = "<group>"; };
+		E210562022E5DD8200DCAFFC /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		E210562122E5DD8200DCAFFC /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
 		E216579122E5CD3400A5AA0F /* VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E216579422E5CD3400A5AA0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E216579622E5CD3400A5AA0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E216579622E5CD3400A5AA0F /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		E216579922E5CD3400A5AA0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E216579B22E5CD3500A5AA0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E216579E22E5CD3500A5AA0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +101,15 @@
 		E21657B022E5CD3600A5AA0F /* VIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21657B422E5CD3600A5AA0F /* VIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERUITests.swift; sourceTree = "<group>"; };
 		E21657B622E5CD3600A5AA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E219639922E88C1300683C67 /* WeatherInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		E266100122E833200019CCB9 /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		E2818E6C22E9848700D05EBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E2E309E222E9C4FB00ED0BE4 /* SwiftGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftGif.h; sourceTree = "<group>"; };
+		E2E309E422E9C50500ED0BE4 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		E2E309E622E9C52500ED0BE4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB6DC90F06AFE259ADE78A3A /* Pods-VIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPER.release.xcconfig"; path = "Target Support Files/Pods-VIPER/Pods-VIPER.release.xcconfig"; sourceTree = "<group>"; };
+		ED2B1D03DEC5FB3BB91DAF7F /* Pods-VIPERTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPERTests.debug.xcconfig"; path = "Target Support Files/Pods-VIPERTests/Pods-VIPERTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F14DD498D526ECE15ACF0080 /* Pods_VIPERUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPERUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086494022DA5C573694CFE8A /* Pods_VIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA83B04506A2B2108A347383 /* Pods_VIPERTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +133,131 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360D2BD95BD6C37E844FE835 /* Pods_VIPERUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0633ED0BA92822F8F1E75E53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FDF086D0DE26B7CE820663B /* Pods_VIPER.framework */,
+				07D910386807400C5F603413 /* Pods_VIPERTests.framework */,
+				F14DD498D526ECE15ACF0080 /* Pods_VIPERUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		895B1C89E62F53BA204B1C0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8C8B34F21E2F9E0D626F638 /* Pods-VIPER.debug.xcconfig */,
+				EB6DC90F06AFE259ADE78A3A /* Pods-VIPER.release.xcconfig */,
+				ED2B1D03DEC5FB3BB91DAF7F /* Pods-VIPERTests.debug.xcconfig */,
+				DA22764E4109D8074FCFD00E /* Pods-VIPERTests.release.xcconfig */,
+				33C6793092C001DF7A29491C /* Pods-VIPERUITests.debug.xcconfig */,
+				6A498476458FCD44403F6209 /* Pods-VIPERUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E20F6F2D22E70DE1005A8C5A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E20F6F2E22E70DE1005A8C5A /* NetworkManager.swift */,
+				E20F6F2F22E70DE1005A8C5A /* Utilities.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E20F6F3022E70DE2005A8C5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E20F6F3922E710AF005A8C5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E219639922E88C1300683C67 /* WeatherInfo.swift */,
+				E20F6F3A22E710BC005A8C5A /* WeatherModel.swift */,
+				E20F6F3E22E74781005A8C5A /* WeatherList.swift */,
+				E20F6F3C22E71844005A8C5A /* WeatherModel2.swift */,
+				E266100122E833200019CCB9 /* WeatherAPI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E210560522E5D7B400DCAFFC /* Table view cells */ = {
+			isa = PBXGroup;
+			children = (
+				E210560B22E5D80D00DCAFFC /* Today */,
+				E210560C22E5D81F00DCAFFC /* Hourly */,
+				E210560D22E5D82C00DCAFFC /* Weekly */,
+				E210560E22E5D84500DCAFFC /* Description */,
+				E210561F22E5DD5500DCAFFC /* Details */,
+			);
+			path = "Table view cells";
+			sourceTree = "<group>";
+		};
+		E210560622E5D7BF00DCAFFC /* Collection view cells */ = {
+			isa = PBXGroup;
+			children = (
+				E210561B22E5D9BC00DCAFFC /* HourlyCollectionViewCell.swift */,
+				E210561C22E5D9BC00DCAFFC /* HourlyCollectionViewCell.xib */,
+				E20F6F2522E6E8DE005A8C5A /* HourlyCVC.swift */,
+			);
+			path = "Collection view cells";
+			sourceTree = "<group>";
+		};
+		E210560B22E5D80D00DCAFFC /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				E210560722E5D80400DCAFFC /* TodayTableViewCell.swift */,
+				E210560822E5D80400DCAFFC /* TodayTableViewCell.xib */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		E210560C22E5D81F00DCAFFC /* Hourly */ = {
+			isa = PBXGroup;
+			children = (
+				E210560F22E5D85A00DCAFFC /* HourlyTableViewCell.swift */,
+				E210561022E5D85A00DCAFFC /* HourlyTableViewCell.xib */,
+			);
+			path = Hourly;
+			sourceTree = "<group>";
+		};
+		E210560D22E5D82C00DCAFFC /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				E210561322E5D86B00DCAFFC /* WeeklyTableViewCell.swift */,
+				E210561422E5D86B00DCAFFC /* WeeklyTableViewCell.xib */,
+			);
+			path = Weekly;
+			sourceTree = "<group>";
+		};
+		E210560E22E5D84500DCAFFC /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				E210561722E5D87C00DCAFFC /* DescriptionTableViewCell.swift */,
+				E210561822E5D87C00DCAFFC /* DescriptionTableViewCell.xib */,
+			);
+			path = Description;
+			sourceTree = "<group>";
+		};
+		E210561F22E5DD5500DCAFFC /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E210562022E5DD8200DCAFFC /* DetailsTableViewCell.swift */,
+				E210562122E5DD8200DCAFFC /* DetailsTableViewCell.xib */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		E216578822E5CD3400A5AA0F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +265,8 @@
 				E21657A822E5CD3500A5AA0F /* VIPERTests */,
 				E21657B322E5CD3600A5AA0F /* VIPERUITests */,
 				E216579222E5CD3400A5AA0F /* Products */,
+				895B1C89E62F53BA204B1C0E /* Pods */,
+				0633ED0BA92822F8F1E75E53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +283,20 @@
 		E216579322E5CD3400A5AA0F /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				E2E309E022E9C4FB00ED0BE4 /* SwiftGif */,
+				E2818E6B22E9846900D05EBE /* Constants */,
+				E219639822E889E100683C67 /* Presentator */,
+				E20F6F3922E710AF005A8C5A /* Model */,
+				E20F6F2D22E70DE1005A8C5A /* Interactor */,
+				E20F6F3022E70DE2005A8C5A /* View */,
+				E210560622E5D7BF00DCAFFC /* Collection view cells */,
+				E210560522E5D7B400DCAFFC /* Table view cells */,
 				E216579422E5CD3400A5AA0F /* AppDelegate.swift */,
-				E216579622E5CD3400A5AA0F /* ViewController.swift */,
 				E216579822E5CD3400A5AA0F /* Main.storyboard */,
+				E20F6F3322E70DE2005A8C5A /* Main.storyboard */,
 				E216579B22E5CD3500A5AA0F /* Assets.xcassets */,
 				E216579D22E5CD3500A5AA0F /* LaunchScreen.storyboard */,
+				E20F6F3122E70DE2005A8C5A /* LaunchScreen.storyboard */,
 				E21657A022E5CD3500A5AA0F /* Info.plist */,
 			);
 			path = VIPER;
@@ -125,6 +320,32 @@
 			path = VIPERUITests;
 			sourceTree = "<group>";
 		};
+		E219639822E889E100683C67 /* Presentator */ = {
+			isa = PBXGroup;
+			children = (
+				E216579622E5CD3400A5AA0F /* WeatherViewController.swift */,
+			);
+			path = Presentator;
+			sourceTree = "<group>";
+		};
+		E2818E6B22E9846900D05EBE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E2818E6C22E9848700D05EBE /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E2E309E022E9C4FB00ED0BE4 /* SwiftGif */ = {
+			isa = PBXGroup;
+			children = (
+				E2E309E422E9C50500ED0BE4 /* UIImage+Gif.swift */,
+				E2E309E222E9C4FB00ED0BE4 /* SwiftGif.h */,
+				E2E309E622E9C52500ED0BE4 /* Info.plist */,
+			);
+			path = SwiftGif;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E21657B922E5CD3600A5AA0F /* Build configuration list for PBXNativeTarget "VIPER" */;
 			buildPhases = (
+				D23D0B8F4E34B89D0DD83700 /* [CP] Check Pods Manifest.lock */,
 				E216578D22E5CD3400A5AA0F /* Sources */,
 				E216578E22E5CD3400A5AA0F /* Frameworks */,
 				E216578F22E5CD3400A5AA0F /* Resources */,
+				3DD55FFFF285F07930A53B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +372,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E21657BC22E5CD3600A5AA0F /* Build configuration list for PBXNativeTarget "VIPERTests" */;
 			buildPhases = (
+				2B36DD5CCBD2703C7CAA46A3 /* [CP] Check Pods Manifest.lock */,
 				E21657A122E5CD3500A5AA0F /* Sources */,
 				E21657A222E5CD3500A5AA0F /* Frameworks */,
 				E21657A322E5CD3500A5AA0F /* Resources */,
@@ -167,6 +391,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E21657BF22E5CD3600A5AA0F /* Build configuration list for PBXNativeTarget "VIPERUITests" */;
 			buildPhases = (
+				C3FB627DF0E656F27C39D762 /* [CP] Check Pods Manifest.lock */,
 				E21657AC22E5CD3600A5AA0F /* Sources */,
 				E21657AD22E5CD3600A5AA0F /* Frameworks */,
 				E21657AE22E5CD3600A5AA0F /* Resources */,
@@ -230,8 +455,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E216579F22E5CD3500A5AA0F /* LaunchScreen.storyboard in Resources */,
+				E210561222E5D85A00DCAFFC /* HourlyTableViewCell.xib in Resources */,
 				E216579C22E5CD3500A5AA0F /* Assets.xcassets in Resources */,
+				E20F6F3722E70DE2005A8C5A /* LaunchScreen.storyboard in Resources */,
 				E216579A22E5CD3400A5AA0F /* Main.storyboard in Resources */,
+				E20F6F3822E70DE2005A8C5A /* Main.storyboard in Resources */,
+				E210561622E5D86B00DCAFFC /* WeeklyTableViewCell.xib in Resources */,
+				E210562322E5DD8200DCAFFC /* DetailsTableViewCell.xib in Resources */,
+				E2E309E722E9C52500ED0BE4 /* Info.plist in Resources */,
+				E210561A22E5D87C00DCAFFC /* DescriptionTableViewCell.xib in Resources */,
+				E210560A22E5D80400DCAFFC /* TodayTableViewCell.xib in Resources */,
+				E210561E22E5D9BC00DCAFFC /* HourlyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +485,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B36DD5CCBD2703C7CAA46A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPERTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DD55FFFF285F07930A53B80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VIPER/Pods-VIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3FB627DF0E656F27C39D762 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPERUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D23D0B8F4E34B89D0DD83700 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E216578D22E5CD3400A5AA0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E216579722E5CD3400A5AA0F /* ViewController.swift in Sources */,
+				E210561D22E5D9BC00DCAFFC /* HourlyCollectionViewCell.swift in Sources */,
+				E2818E6D22E9848700D05EBE /* Constants.swift in Sources */,
+				E210561522E5D86B00DCAFFC /* WeeklyTableViewCell.swift in Sources */,
+				E20F6F3F22E74781005A8C5A /* WeatherList.swift in Sources */,
+				E20F6F3622E70DE2005A8C5A /* Utilities.swift in Sources */,
+				E20F6F3D22E71844005A8C5A /* WeatherModel2.swift in Sources */,
+				E20F6F3522E70DE2005A8C5A /* NetworkManager.swift in Sources */,
+				E216579722E5CD3400A5AA0F /* WeatherViewController.swift in Sources */,
+				E210560922E5D80400DCAFFC /* TodayTableViewCell.swift in Sources */,
+				E219639A22E88C1400683C67 /* WeatherInfo.swift in Sources */,
+				E210561122E5D85A00DCAFFC /* HourlyTableViewCell.swift in Sources */,
+				E20F6F2622E6E8DE005A8C5A /* HourlyCVC.swift in Sources */,
+				E2E309E522E9C50600ED0BE4 /* UIImage+Gif.swift in Sources */,
+				E210561922E5D87C00DCAFFC /* DescriptionTableViewCell.swift in Sources */,
+				E210562222E5DD8200DCAFFC /* DetailsTableViewCell.swift in Sources */,
+				E266100222E833200019CCB9 /* WeatherAPI.swift in Sources */,
+				E20F6F3B22E710BC005A8C5A /* WeatherModel.swift in Sources */,
 				E216579522E5CD3400A5AA0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +611,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E20F6F3122E70DE2005A8C5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20F6F3222E70DE2005A8C5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E20F6F3322E70DE2005A8C5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E20F6F3422E70DE2005A8C5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		E216579822E5CD3400A5AA0F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -428,9 +762,11 @@
 		};
 		E21657BA22E5CD3600A5AA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C8B34F21E2F9E0D626F638 /* Pods-VIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YP4TQ9R94;
 				INFOPLIST_FILE = VIPER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,9 +781,11 @@
 		};
 		E21657BB22E5CD3600A5AA0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6DC90F06AFE259ADE78A3A /* Pods-VIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YP4TQ9R94;
 				INFOPLIST_FILE = VIPER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,6 +800,7 @@
 		};
 		E21657BD22E5CD3600A5AA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2B1D03DEC5FB3BB91DAF7F /* Pods-VIPERTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +821,7 @@
 		};
 		E21657BE22E5CD3600A5AA0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA22764E4109D8074FCFD00E /* Pods-VIPERTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +842,7 @@
 		};
 		E21657C022E5CD3600A5AA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C6793092C001DF7A29491C /* Pods-VIPERUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -521,6 +862,7 @@
 		};
 		E21657C122E5CD3600A5AA0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A498476458FCD44403F6209 /* Pods-VIPERUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

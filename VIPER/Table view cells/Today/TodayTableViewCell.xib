@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayTableViewCell" rowHeight="35" id="KGk-i7-Jjw" customClass="TodayTableViewCell" customModule="VIPER" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="34.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONDAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kac-uu-hn9">
+                        <rect key="frame" x="8" y="8" width="73" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-US-IJl">
+                        <rect key="frame" x="89" y="10.5" width="42.5" height="15.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvA-Uw-wM9">
+                        <rect key="frame" x="295" y="9.5" width="17" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttp-9V-1Ea">
+                        <rect key="frame" x="270" y="9" width="17" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-ea-3Bq" userLabel="Seperator">
+                        <rect key="frame" x="0.0" y="30" width="320" height="0.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="EcG-cL-fdl"/>
+                            <constraint firstAttribute="width" constant="320" id="bDR-mN-S74"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kac-uu-hn9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="2D5-Uy-8RY"/>
+                    <constraint firstItem="a0T-ea-3Bq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6w2-aq-3cd"/>
+                    <constraint firstItem="a0T-ea-3Bq" firstAttribute="top" secondItem="kac-uu-hn9" secondAttribute="bottom" constant="2" id="CkP-Z5-NUR"/>
+                    <constraint firstItem="kac-uu-hn9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="QmA-LP-elY"/>
+                    <constraint firstItem="lvA-Uw-wM9" firstAttribute="leading" secondItem="Ttp-9V-1Ea" secondAttribute="trailing" constant="8" id="QsE-x9-QGG"/>
+                    <constraint firstAttribute="trailing" secondItem="lvA-Uw-wM9" secondAttribute="trailing" constant="8" id="R2i-po-5XJ"/>
+                    <constraint firstAttribute="trailing" secondItem="a0T-ea-3Bq" secondAttribute="trailing" id="YCw-ZO-PLE"/>
+                    <constraint firstItem="lPW-US-IJl" firstAttribute="centerY" secondItem="kac-uu-hn9" secondAttribute="centerY" id="iLx-LG-A4l"/>
+                    <constraint firstItem="lvA-Uw-wM9" firstAttribute="centerY" secondItem="kac-uu-hn9" secondAttribute="centerY" id="ief-Kh-aeV"/>
+                    <constraint firstItem="Ttp-9V-1Ea" firstAttribute="centerY" secondItem="kac-uu-hn9" secondAttribute="centerY" id="jcm-jT-ja1"/>
+                    <constraint firstItem="lPW-US-IJl" firstAttribute="leading" secondItem="kac-uu-hn9" secondAttribute="trailing" constant="8" id="ojk-EG-uvf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="day" destination="kac-uu-hn9" id="nve-Td-CPq"/>
+                <outlet property="day2" destination="lPW-US-IJl" id="f1M-VP-byU"/>
+                <outlet property="highestTemp" destination="Ttp-9V-1Ea" id="cvk-qg-LhL"/>
+                <outlet property="lowestTemp" destination="lvA-Uw-wM9" id="XWt-OI-m6r"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="47.5"/>
+        </tableViewCell>
+    </objects>
+</document>
