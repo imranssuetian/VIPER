@@ -31,7 +31,7 @@
                     </collectionView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-ko-bQZ" userLabel="Seperator">
                         <rect key="frame" x="0.0" y="43" width="320" height="0.5"/>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="Qxq-ZD-Rv0"/>
                             <constraint firstAttribute="width" constant="320" id="czx-L3-eiS"/>

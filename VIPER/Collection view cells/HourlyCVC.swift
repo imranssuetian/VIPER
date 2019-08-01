@@ -2,8 +2,8 @@
 //  HourlyCVC.swift
 //  VIPER
 //
-//  Created by macintosh on 23/07/2019.
-//  Copyright © 2019 macintosh. All rights reserved.
+//  Created by Imran Shah on 23/07/2019.
+//  Copyright © 2019 Imran Shah. All rights reserved.
 //
 
 import UIKit

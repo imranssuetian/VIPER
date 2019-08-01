@@ -1,18 +1,17 @@
 //
-//  WeatherInfo.swift
+//  WeatherByID.swift
 //  JSON Parsing
 //
-//  Created by macintosh on 24/07/2019.
-//  Copyright © 2019 macintosh. All rights reserved.
+//  Created by Imran Shah on 24/07/2019.
+//  Copyright © 2019 Imran Shah. All rights reserved.
 //
 
 import Foundation
 
-struct WeatherInfo: Decodable {
+struct WeatherByID: Decodable {
     let cod : String
     let message : Double
     let cnt : Int
-    
     let list: [List]
     let city: City
 }
@@ -63,7 +62,7 @@ struct Weather: Decodable { //list
 }
 
 struct Clouds: Decodable { //list
-    let all: Int?
+    let all: Double?
 }
 
 struct Wind: Decodable { //list
@@ -74,4 +73,15 @@ struct Wind: Decodable { //list
 
 struct Sys: Decodable { //list
     let pod: String?
+    let type: Int?
+    let id: Int?
+    let message: Double?
+    let country: String?
+    let sunrise: Double?
+    let sunset: Double?
+    
 }
+
+//struct Rain: Decodable {
+//    let 3h: Double?
+//}

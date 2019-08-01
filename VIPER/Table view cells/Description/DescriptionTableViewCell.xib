@@ -20,15 +20,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHx-a1-BkR">
+                        <rect key="frame" x="8" y="11" width="304" height="60"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today: Partly cloudy condtions with a heat index of 41° and 26 km/hr winds from the south-west." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEq-qI-256">
-                        <rect key="frame" x="24" y="13" width="280" height="52.5"/>
+                        <rect key="frame" x="16" y="16" width="288" height="52.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-hJ-ddZ" userLabel="Seperator">
                         <rect key="frame" x="0.0" y="81" width="320" height="0.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="5hf-Zy-3Hf"/>
                             <constraint firstAttribute="width" constant="320" id="EMP-dN-syk"/>
@@ -36,17 +40,22 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="BHx-a1-BkR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="EKr-BU-ejE"/>
+                    <constraint firstItem="BHx-a1-BkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="EmI-P6-iAt"/>
                     <constraint firstItem="V9O-hJ-ddZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ez3-H5-rKN"/>
-                    <constraint firstItem="lEq-qI-256" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="msZ-af-5zZ"/>
+                    <constraint firstAttribute="trailing" secondItem="BHx-a1-BkR" secondAttribute="trailing" constant="8" id="XmX-ng-FQM"/>
+                    <constraint firstItem="lEq-qI-256" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="msZ-af-5zZ"/>
+                    <constraint firstItem="V9O-hJ-ddZ" firstAttribute="top" secondItem="BHx-a1-BkR" secondAttribute="bottom" constant="10" id="sq8-xh-28x"/>
                     <constraint firstItem="lEq-qI-256" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ssm-zT-ceB"/>
                     <constraint firstAttribute="bottom" secondItem="V9O-hJ-ddZ" secondAttribute="bottom" id="uzX-DP-wDH"/>
-                    <constraint firstItem="lEq-qI-256" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="vem-n5-Mkc"/>
+                    <constraint firstItem="lEq-qI-256" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vem-n5-Mkc"/>
                     <constraint firstAttribute="trailing" secondItem="V9O-hJ-ddZ" secondAttribute="trailing" id="yDc-hr-jWf"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="descriptionView" destination="BHx-a1-BkR" id="Jkv-uT-s78"/>
                 <outlet property="tempDesc" destination="lEq-qI-256" id="O42-e1-9LR"/>
             </connections>
             <point key="canvasLocation" x="25" y="71"/>

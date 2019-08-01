@@ -2,8 +2,8 @@
 //  VIPERUITests.swift
 //  VIPERUITests
 //
-//  Created by macintosh on 22/07/2019.
-//  Copyright © 2019 macintosh. All rights reserved.
+//  Created by Imran Shah on 22/07/2019.
+//  Copyright © 2019 Imran Shah. All rights reserved.
 //
 
 import XCTest

@@ -2,8 +2,8 @@
 //  DetailsTableViewCell.swift
 //  VIPER
 //
-//  Created by macintosh on 22/07/2019.
-//  Copyright © 2019 macintosh. All rights reserved.
+//  Created by Imran Shah on 22/07/2019.
+//  Copyright © 2019 Imran Shah. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,10 @@ class DetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var topLabel2: UILabel!
     @IBOutlet weak var bottomLabel2: UILabel!
 
+    @IBOutlet weak var leftView: UIView!
+    @IBOutlet weak var rightView: UIView!
+    
+    @IBOutlet weak var seperator: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
