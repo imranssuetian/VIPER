@@ -18,7 +18,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        backgroundImage.image = UIImage.gif(url: Constants.clear_day)
+        backgroundImage.image = UIImage.gif(url: clear_day)
         searchView.layer.cornerRadius = 10
         searchTextField.attributedPlaceholder = NSAttributedString(string: "Search By City",
                                                                    attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])

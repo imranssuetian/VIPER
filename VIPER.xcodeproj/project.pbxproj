@@ -34,9 +34,15 @@
 		E21657AA22E5CD3600A5AA0F /* VIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21657A922E5CD3600A5AA0F /* VIPERTests.swift */; };
 		E21657B522E5CD3600A5AA0F /* VIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21657B422E5CD3600A5AA0F /* VIPERUITests.swift */; };
 		E219639A22E88C1400683C67 /* WeatherByID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219639922E88C1300683C67 /* WeatherByID.swift */; };
+		E238913722F95E8200FE5D1B /* WeatherTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238913622F95E8200FE5D1B /* WeatherTableView.swift */; };
+		E238913922F95E8E00FE5D1B /* WeatherCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E238913822F95E8E00FE5D1B /* WeatherCollectionView.swift */; };
 		E23B1E5522F050EC000D037E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B1E5422F050EC000D037E /* String.swift */; };
 		E23B1E5722F06B94000D037E /* WeatherByCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B1E5622F06B94000D037E /* WeatherByCity.swift */; };
 		E2818E6D22E9848700D05EBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2818E6C22E9848700D05EBE /* Constants.swift */; };
+		E283C07922F703D1000F2898 /* GIFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E283C07822F703D1000F2898 /* GIFConstants.swift */; };
+		E283C07C22F7140C000F2898 /* daily_14.json in Resources */ = {isa = PBXBuildFile; fileRef = E283C07B22F7140C000F2898 /* daily_14.json */; };
+		E283C07E22F7143C000F2898 /* city_list.json in Resources */ = {isa = PBXBuildFile; fileRef = E283C07D22F7143C000F2898 /* city_list.json */; };
+		E283C08022F714C2000F2898 /* CityID.swift in Sources */ = {isa = PBXBuildFile; fileRef = E283C07F22F714C2000F2898 /* CityID.swift */; };
 		E2B67A9622F2CC64000A03A6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B67A9522F2CC64000A03A6 /* SearchViewController.swift */; };
 		E2E309E522E9C50600ED0BE4 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E309E422E9C50500ED0BE4 /* UIImage+Gif.swift */; };
 		E2E309E722E9C52500ED0BE4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E309E622E9C52500ED0BE4 /* Info.plist */; };
@@ -98,9 +104,15 @@
 		E21657B422E5CD3600A5AA0F /* VIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERUITests.swift; sourceTree = "<group>"; };
 		E21657B622E5CD3600A5AA0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E219639922E88C1300683C67 /* WeatherByID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherByID.swift; sourceTree = "<group>"; };
+		E238913622F95E8200FE5D1B /* WeatherTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableView.swift; sourceTree = "<group>"; };
+		E238913822F95E8E00FE5D1B /* WeatherCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionView.swift; sourceTree = "<group>"; };
 		E23B1E5422F050EC000D037E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E23B1E5622F06B94000D037E /* WeatherByCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherByCity.swift; sourceTree = "<group>"; };
 		E2818E6C22E9848700D05EBE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E283C07822F703D1000F2898 /* GIFConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFConstants.swift; sourceTree = "<group>"; };
+		E283C07B22F7140C000F2898 /* daily_14.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = daily_14.json; path = "API List/daily_14.json"; sourceTree = SOURCE_ROOT; };
+		E283C07D22F7143C000F2898 /* city_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = city_list.json; path = "API List/city_list.json"; sourceTree = SOURCE_ROOT; };
+		E283C07F22F714C2000F2898 /* CityID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityID.swift; sourceTree = "<group>"; };
 		E2B67A9522F2CC64000A03A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E2E309E222E9C4FB00ED0BE4 /* SwiftGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftGif.h; sourceTree = "<group>"; };
 		E2E309E422E9C50500ED0BE4 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
@@ -182,6 +194,7 @@
 			children = (
 				E219639922E88C1300683C67 /* WeatherByID.swift */,
 				E23B1E5622F06B94000D037E /* WeatherByCity.swift */,
+				E283C07F22F714C2000F2898 /* CityID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +291,7 @@
 		E216579322E5CD3400A5AA0F /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				E283C07A22F713F4000F2898 /* JSON */,
 				E23B1E5322F050DF000D037E /* Extensions */,
 				E2E309E022E9C4FB00ED0BE4 /* SwiftGif */,
 				E2818E6B22E9846900D05EBE /* Constants */,
@@ -321,6 +335,8 @@
 			children = (
 				E216579622E5CD3400A5AA0F /* WeatherViewController.swift */,
 				E2B67A9522F2CC64000A03A6 /* SearchViewController.swift */,
+				E238913622F95E8200FE5D1B /* WeatherTableView.swift */,
+				E238913822F95E8E00FE5D1B /* WeatherCollectionView.swift */,
 			);
 			path = Presentator;
 			sourceTree = "<group>";
@@ -337,8 +353,18 @@
 			isa = PBXGroup;
 			children = (
 				E2818E6C22E9848700D05EBE /* Constants.swift */,
+				E283C07822F703D1000F2898 /* GIFConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E283C07A22F713F4000F2898 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E283C07B22F7140C000F2898 /* daily_14.json */,
+				E283C07D22F7143C000F2898 /* city_list.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		E2E309E022E9C4FB00ED0BE4 /* SwiftGif */ = {
@@ -460,9 +486,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E216579F22E5CD3500A5AA0F /* LaunchScreen.storyboard in Resources */,
+				E283C07C22F7140C000F2898 /* daily_14.json in Resources */,
 				E210561222E5D85A00DCAFFC /* HourlyTableViewCell.xib in Resources */,
 				E216579C22E5CD3500A5AA0F /* Assets.xcassets in Resources */,
 				E20F6F3722E70DE2005A8C5A /* LaunchScreen.storyboard in Resources */,
+				E283C07E22F7143C000F2898 /* city_list.json in Resources */,
 				E216579A22E5CD3400A5AA0F /* Main.storyboard in Resources */,
 				E20F6F3822E70DE2005A8C5A /* Main.storyboard in Resources */,
 				E210561622E5D86B00DCAFFC /* WeeklyTableViewCell.xib in Resources */,
@@ -563,10 +591,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E238913722F95E8200FE5D1B /* WeatherTableView.swift in Sources */,
 				E23B1E5522F050EC000D037E /* String.swift in Sources */,
 				E210561D22E5D9BC00DCAFFC /* HourlyCollectionViewCell.swift in Sources */,
 				E23B1E5722F06B94000D037E /* WeatherByCity.swift in Sources */,
 				E2B67A9622F2CC64000A03A6 /* SearchViewController.swift in Sources */,
+				E238913922F95E8E00FE5D1B /* WeatherCollectionView.swift in Sources */,
+				E283C07922F703D1000F2898 /* GIFConstants.swift in Sources */,
 				E2818E6D22E9848700D05EBE /* Constants.swift in Sources */,
 				E210561522E5D86B00DCAFFC /* WeeklyTableViewCell.swift in Sources */,
 				E20F6F3622E70DE2005A8C5A /* Utilities.swift in Sources */,
@@ -574,6 +605,7 @@
 				E216579722E5CD3400A5AA0F /* WeatherViewController.swift in Sources */,
 				E210560922E5D80400DCAFFC /* TodayTableViewCell.swift in Sources */,
 				E219639A22E88C1400683C67 /* WeatherByID.swift in Sources */,
+				E283C08022F714C2000F2898 /* CityID.swift in Sources */,
 				E210561122E5D85A00DCAFFC /* HourlyTableViewCell.swift in Sources */,
 				E20F6F2622E6E8DE005A8C5A /* HourlyCVC.swift in Sources */,
 				E2E309E522E9C50600ED0BE4 /* UIImage+Gif.swift in Sources */,

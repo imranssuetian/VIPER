@@ -157,6 +157,16 @@
                                                     <constraint firstAttribute="width" constant="15" id="jlb-ko-3ov"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ix-uC-KXV">
+                                                <rect key="frame" x="287" y="4" width="15" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="3HD-61-ezf"/>
+                                                    <constraint firstAttribute="height" constant="15" id="gcx-WM-ug1"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="didTappedSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OEF-HI-AFu"/>
+                                                </connections>
+                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search by City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fho-wg-fvF">
                                                 <rect key="frame" x="43" y="3" width="236" height="18"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,7 +191,9 @@
                                             <constraint firstItem="c3h-4d-Hym" firstAttribute="top" secondItem="cDx-8g-hot" secondAttribute="top" id="Xa6-IZ-ocZ"/>
                                             <constraint firstItem="7tU-kY-nVn" firstAttribute="leading" secondItem="fho-wg-fvF" secondAttribute="trailing" constant="8" id="ZOS-ZY-GvK"/>
                                             <constraint firstAttribute="trailing" secondItem="7tU-kY-nVn" secondAttribute="trailing" constant="18" id="e4F-KX-SpG"/>
+                                            <constraint firstItem="1ix-uC-KXV" firstAttribute="centerY" secondItem="7tU-kY-nVn" secondAttribute="centerY" id="eF9-YE-Sp0"/>
                                             <constraint firstItem="fho-wg-fvF" firstAttribute="centerY" secondItem="cDx-8g-hot" secondAttribute="centerY" id="iGd-qo-egH"/>
+                                            <constraint firstItem="1ix-uC-KXV" firstAttribute="centerX" secondItem="7tU-kY-nVn" secondAttribute="centerX" id="qBM-5n-vLT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -219,6 +231,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="Hvc-FQ-VJJ" id="eWO-Se-cJ9"/>
                         <outlet property="cityName" destination="jzb-W9-FhX" id="max-w8-Acm"/>
+                        <outlet property="mainView" destination="K0x-eB-DFY" id="wRM-gd-M6V"/>
                         <outlet property="searchTextField" destination="fho-wg-fvF" id="VVo-ys-0ZZ"/>
                         <outlet property="searchView" destination="c3h-4d-Hym" id="i1V-y6-1DE"/>
                         <outlet property="status" destination="4DH-4M-b8d" id="4Fh-MG-GqP"/>

@@ -8,10 +8,13 @@
 
 import UIKit
 import OpenWeatherKit
+import SVProgressHUD
+import SwiftyJSON
 
 class WeatherViewController: UIViewController {
 
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var temprature: UILabel!
@@ -23,10 +26,12 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var backgroundImage: UIImageView!
     
+    
+    
     //for hours
-    var time = ["Now","2 AM","3 AM","4 AM","5 AM","6 AM","7 AM"]
-    var temp = [31.0,32.1,32.1,32.1,32.1,32.1,32.1]
-    var image = ["clear-day","clear-night","dark-sky-logo","fog","partly-cloudy-day","partly-cloudy-night","rain"] //sleet snow wind
+    var time: [String] = []
+    var temp: [Double] = []
+    var image: [String] = [] //sleet snow wind
     var dt_Array = [Double]()
     var temp_Array = [Double]()
     var weatherNameArray = [String]()
@@ -36,10 +41,10 @@ class WeatherViewController: UIViewController {
     var maximumTemp: Double = 0
     
     //for days
-    var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
-    var daysImage = ["clear-day","clear-night","dark-sky-logo","fog","partly-cloudy-day","partly-cloudy-night","rain"] //sleet snow wind
-    var lowestTemp = [31.0,32.1,32.1,32.1,32.1,32.1,32.1]
-    var highestTemp = [31.0,32.1,32.1,32.1,32.1,32.1,32.1]
+    var days: [String] = []
+    var daysImage: [String] = [] //sleet snow wind
+    var lowestTemp: [Double] = []
+    var highestTemp: [Double] = []
     var lowest_temp_array = [Double]()
     var highest_temp_array = [Double]()
     
@@ -90,82 +95,106 @@ class WeatherViewController: UIViewController {
     var cloudiness:Double = 0
     var precipitation:Double = 0
     
-    var temprature_description: String = "Today: Partly cloudy condtions with a heat index of 41° and 26 km/hr winds from the south-west."
+    var temprature_description: String = ""
+    
+    var cityID: [CityID] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Hello world")
-        searchView.layer.cornerRadius = 10
-        searchTextField.attributedPlaceholder = NSAttributedString(string: "Search By City",
-                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        
+        self.setupUI()
+        self.setupTableView()
+        self.checkCity(fileName: "city_list", cityName: searchTextField.text!)
+        
+    }
+    
+    func checkCity(fileName: String,cityName: String){
+        self.searchTextField.text = ""
+        
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                
+                let jsonData = try decoder.decode([CityID].self, from: data)
+                
+                if(cityName == ""){
+                    
+                    self.setupAPI(city_id: "707860")
+                    
+                }else{
+                    
+                    for city in jsonData {
+                        
+                        print(city.name)
+                        
+                        if(cityName == city.name){
+                            
+                            let city_code = city.id
+                            let city_code_string = String(city_code)
+                            self.setupAPI(city_id: city_code_string)
+                            
+                        }
+                        
+                    }
+                    print("imran")
+                }
+                
+                print(jsonData[1].name)
+                
+                
+            } catch {
+                print("error:\(error)")
+            }
+        }
 
-//        let API_KEY:String = "39d3df86cda45bf4394dbeb18fa015d9"
-//        let weatherApi = WeatherApi(key: API_KEY)
-//
-//        weatherApi.getWeatherFor(cityId: 1275339) { (result) in
-//            switch result {
-//            case .success(let weather):
-//
-//                //                self.cityLabel.text = weather.name
-//                //                self.tempLabel.text = "\(weather.main.temp)"
-//
-//                print(weather.name)
-//                print(weather.clouds)
-//
-//
-//            case .error(_):
-//                //Do something
-//                break
-//            }
         
-//        }
-        
-//        weatherApi.getWeatherFor(lat: "5.567788", lon: "1.5544") { result in
-//            switch result {
-//            case .success(let weather):
-//
-////                self.cityLabel.text = weather.name
-////                self.tempLabel.text = "\(weather.main.temp)"
-//
-//                print(weather.name)
-//                print(weather.clouds)
-//
-//            case .error(_):
-//                //Do something
-//                break
-//            }
-//        }
-        
-        //backgroundImage.image = UIImage.gif(url: Constants.sleet)
-
-        setupTableView()
+    }
+    
+    func loadJson(filename fileName: String) -> [CityID]? {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode(ResponseData.self, from: data)
+                return jsonData.Cities
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
+    }
+    
+    func setupAPI(city_id: String){
         
         let base_url = "http://api.openweathermap.org/data/2.5/forecast?id="
-        let city_id = "1174872"
+//        let city_id = "1174872"
         let mics = "&APPID="
         let api_key = "39d3df86cda45bf4394dbeb18fa015d9"
         
-//        let urlString = "http://api.openweathermap.org/data/2.5/forecast?id=1275339&APPID=39d3df86cda45bf4394dbeb18fa015d9"
         let urlString = base_url + city_id + mics + api_key
-
-//        APIRouter.urlRequest(modelType: WeatherInfo.self, urlString: urlString)
-    
         urlRequest(urlString: urlString)
+
         
+    }
+    
+    
+    func setupUI(){
+        searchView.layer.cornerRadius = 10
+        searchTextField.attributedPlaceholder = NSAttributedString(string: "Search By City", attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        searchTextField.returnKeyType = .search
+        searchTextField.delegate = self
         
-
-
-
-
     }
     
     @IBAction func didTappedSearchField(_ sender: UITextField) {
         
         print("did tapped")
-        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        let window = UIApplication.shared.keyWindow
-        window?.rootViewController = rootVC
+//        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+//        let window = UIApplication.shared.keyWindow
+//        window?.rootViewController = rootVC
 
         
     }
@@ -189,39 +218,39 @@ class WeatherViewController: UIViewController {
             
         case .Clear:
             
-            backgroundImage.image = UIImage.gif(url: Constants.clear_day)
-
+            backgroundImage.image =  UIImage.gif(url: clear_day)
+            
             
         case .Rain:
             
-            backgroundImage.image = UIImage.gif(url: Constants.blueClouds)
+            backgroundImage.image = UIImage.gif(url: blueClouds)
             UIApplication.shared.statusBarStyle = .lightContent
-
+            
             
         case .Snow:
             
-            backgroundImage.image = UIImage.gif(url: Constants.snow)
+            backgroundImage.image = UIImage.gif(url: snow)
             
         case .Clouds:
             
-            backgroundImage.image = UIImage.gif(url: Constants.blueClouds)
+            backgroundImage.image = UIImage.gif(url: clear_day)
             UIApplication.shared.statusBarStyle = .lightContent
-
+            
         case .Fog:
             
-            backgroundImage.image = UIImage.gif(url: Constants.fog)
+            backgroundImage.image = UIImage.gif(url: fog)
             UIApplication.shared.statusBarStyle = .lightContent
-
+            
             
         case .Sun:
             
-            backgroundImage.image = UIImage.gif(url: Constants.sun)
-
+            backgroundImage.image = UIImage.gif(url: sun)
+            
             
         case .Wind:
             
-            backgroundImage.image = UIImage.gif(url: Constants.wind)
-
+            backgroundImage.image = UIImage.gif(url: wind)
+            
         }
         
     }
@@ -229,7 +258,9 @@ class WeatherViewController: UIViewController {
     
     
     func urlRequest(urlString: String) {
-        
+        self.mainView.isHidden = true
+        SVProgressHUD.show(withStatus: "Loading Request")
+
         //        let jsonUrlString = "http://api.openweathermap.org/data/2.5/forecast?id=1275339&APPID=39d3df86cda45bf4394dbeb18fa015d9"
         guard let url = URL(string: urlString) else { return }
         
@@ -245,7 +276,7 @@ class WeatherViewController: UIViewController {
             do {
                 
                 let myStruct = try JSONDecoder().decode(WeatherByID.self, from: data)
-       
+    
                 let cityName : String = myStruct.city.name!
                 let weatherStatus : String = myStruct.list[0].weather[0].main!
                 let weatherDescription: String = myStruct.list[0].weather[0].description!
@@ -270,6 +301,12 @@ class WeatherViewController: UIViewController {
 //                self.precipitation = myStruct.list[0].main.humidity!
                 
                 //for hours
+                self.dt_Array = []
+                self.temp_Array = []
+                self.weatherNameArray = []
+                self.lowest_temp_array = []
+                self.highest_temp_array = []
+                
                 for i in 0...39 {
                     
                     let dt_value = myStruct.list[i].dt
@@ -327,6 +364,14 @@ class WeatherViewController: UIViewController {
                 self.daysImage = []
                 self.lowestTemp = []
                 self.highestTemp = []
+                
+                self.mondayCount = 0
+                self.tuesdayCount = 0
+                self.wednesdayCount = 0
+                self.thursdayCount = 0
+                self.fridayCount = 0
+                self.saturdayCount = 0
+                self.sundayCount = 0
                 
                 for d in 0...self.dt_Array.count - 1{
                     
@@ -448,7 +493,9 @@ class WeatherViewController: UIViewController {
                     let weather: Weather = WeatherViewController.Weather(rawValue: weatherStatus)!
                     self.setBackgroundImage(weather: weather)
                     
-                        
+                    SVProgressHUD.dismiss()
+                    self.mainView.isHidden = false
+
                     
                 }
                 
@@ -519,8 +566,6 @@ class WeatherViewController: UIViewController {
         weatherTableView.delegate = self
         weatherTableView.dataSource = self
 
-        
-        
         weatherTableView.register(UINib(nibName: "TodayTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayTableViewCell")
 //        weatherTableView.register(UINib(nibName: "HourlyTableViewCell", bundle: nil), forCellReuseIdentifier: "HourlyTableViewCell")
         weatherTableView.register(UINib(nibName: "WeeklyTableViewCell", bundle: nil), forCellReuseIdentifier: "WeeklyTableViewCell")
@@ -530,272 +575,37 @@ class WeatherViewController: UIViewController {
     }
 
 
-}
-
-extension WeatherViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+    @IBAction func didTappedSearch(_ sender: UIButton) {
         
-        let cellSize = CGSize(width:67 , height:100)
-
-        return cellSize
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout
-        collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7 //model[collectionView.tag].count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCVC", for: indexPath) as! HourlyCVC
-            
-            cell.time.text = "\(self.time[indexPath.item])"
-            cell.image.image = UIImage(named: "\(image[indexPath.item])")
-            cell.temp.text = String(format: "%.f", temp[indexPath.item])
+        print("Search Tapped")
+        self.view.endEditing(true)
+        self.checkCity(fileName: "city_list", cityName: searchTextField.text!)
         
-            return cell
-            
-      
+
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
-    }
+    
 }
 
 
-extension WeatherViewController: UITableViewDelegate, UITableViewDataSource {
+
+extension WeatherViewController: UITextFieldDelegate {
     
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTableViewCell", for: indexPath)
-        //        cell.selectionStyle = .none
-        //
-        //        return cell
-        
-        
-        if(indexPath.section == 0){
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TodayTableViewCell", for: indexPath) as! TodayTableViewCell
-            
-            cell.day.text = self.day
-            cell.day2.text = "Today"
-            
-            
-            let minimumTempConverted = String(format: "%.f", self.minimumTemp)
-            let maximumTempConverted = String(format: "%.f", self.maximumTemp)
-
-            cell.lowestTemp.text = "\(minimumTempConverted)°"
-            cell.highestTemp.text = "\(maximumTempConverted)°"
-        
-            cell.selectionStyle = .none
-            cell.todayView.layer.cornerRadius = 10
-            
-            return cell
-            
-        }else if(indexPath.section == 1){
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTableViewCell", for: indexPath)
-            cell.selectionStyle = .none
-            
-            return cell
-            
-        }else if(indexPath.section == 2){
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "WeeklyTableViewCell", for: indexPath) as! WeeklyTableViewCell
-            
-            cell.day.text = "\(days[indexPath.row])"
-            cell.tempImage.image = UIImage(named: "\(daysImage[indexPath.row])")
-            cell.lowestTemp.text = String(format: "%.f", lowestTemp[indexPath.row]) // "\(lowestTemp[indexPath.row])"
-            cell.highestTemp.text = String(format: "%.f", highestTemp[indexPath.row]) //"\(highestTemp[indexPath.row])"
-            cell.weeklyView.layer.cornerRadius = 10
-
-            cell.selectionStyle = .none
-            
-            if(indexPath.row == 4){
-                
-                cell.seperator.isHidden = false
-            }else{
-                cell.seperator.isHidden = true
-            }
-            
-            
-            return cell
-            
-        }else if(indexPath.section == 3){
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell", for: indexPath) as! DescriptionTableViewCell
-            
-            cell.tempDesc.text = "Today's weather: \(temprature_description)"
-            cell.descriptionView.layer.cornerRadius = 10
-
-            cell.selectionStyle = .none
-            
-            return cell
-            
-        }else {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsTableViewCell", for: indexPath) as! DetailsTableViewCell
-            cell.leftView.layer.cornerRadius = 10
-            cell.rightView.layer.cornerRadius = 10
-
-            cell.selectionStyle = .none
-
-            
-            if(indexPath.row == 0){
-                
-                cell.topLabel1.text = "HUMIDITY"
-                cell.bottomLabel1.text = "\(String(format: "%.f", self.humidity))%" // "\(self.humidity)%"
-                cell.topLabel2.text = "PRESSURE"
-                cell.bottomLabel2.text = "\(String(format: "%.f", self.pressure)) hPa" // "\(self.pressure) hPa"
-
-                cell.seperator.isHidden = false
-
-            }else if(indexPath.row == 1){
-                
-                
-                cell.topLabel1.text = "SEA LEVEL"
-                cell.bottomLabel1.text = "\(String(format: "%.f", self.sea_level)) hPa" // "\(self.sea_level) hPa"
-                cell.topLabel2.text = "GROUND LEVEL"
-                cell.bottomLabel2.text = "\(String(format: "%.f", self.ground_level)) hPa" // "\(self.ground_level) hPa"
-
-                cell.seperator.isHidden = false
-
-            }else if(indexPath.row == 2){
-                
-                cell.topLabel1.text = "Wind speed"
-                cell.bottomLabel1.text = "\(String(format: "%.f", self.wind_speed)) m/s" // "\(self.wind_speed) meter/sec"
-                cell.topLabel2.text = "Wind direction"
-                cell.bottomLabel2.text = "\(String(format: "%.f", self.wind_direction))°" // "\(self.wind_direction) degrees"
-
-                cell.seperator.isHidden = false
-
-            }else {
-                
-                cell.topLabel1.text = "Cloudiness"
-                cell.bottomLabel1.text = "\(String(format: "%.f", self.cloudiness))%" // "\(self.cloudiness)%"
-                cell.topLabel2.text = "Precipitation last 3 hours"
-                cell.bottomLabel2.text = "\(String(format: "%.f", self.precipitation))%" // "\(self.precipitation)"
-                
-                cell.seperator.isHidden = true
-            }
-            
-            
-            return cell
-            
-        }
-        
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if(indexPath.section == 1){
-            
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyTableViewCell", for: indexPath) as! HourlyTableViewCell
-//            cell.selectionStyle = .none
-//
-//            return cell
-            
-            guard let cell = cell as? HourlyTableViewCell else { return }
-            
-            cell.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
-//            cell.collectionViewOffset = storedOffsets[indexPath.row] ?? 0
+        print("Search Tapped")
+        self.view.endEditing(true)
+        self.checkCity(fileName: "city_list", cityName: searchTextField.text!)
 
-            
-        }
         
-
+        return true
     }
-    
-//    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//
-//
-//
-//        guard let tableViewCell = cell as? TableViewCell else { return }
-//
-//        storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
-//    }
-    
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if(indexPath.section == 0){
-            
-            return 40
-            
-        }else if(indexPath.section == 1){
-            
-            return 105
-            
-        }else if(indexPath.section == 2){
-            
-            return 44
-            
-        }else if(indexPath.section == 3){
-            
-            let height = self.temprature_description.heightWithConstrainedWidth(width: self.view.bounds.width, font: UIFont(name: "HelveticaNeue-UltraLight", size: 17)!)
-            let padding: CGFloat = 30
-            
-            return height + padding
-            
-        }else {
-            
-            return 65
-            
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if(section == 0){
-            
-            return 1
-            
-        }else if(section == 1){
-            
-            return 1
-
-        }else if(section == 2){
-            
-            return days.count
-            
-        }else if(section == 3){
-            
-            return 1
-            
-        }else {
-            
-            return 4
-            
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
-    }
-    
-    
-    
-    
-    
-    
     
 }
+
+
+
